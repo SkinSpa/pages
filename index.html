@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="/img/favicon.png">
+    <meta name="apple-mobile-web-app-title" content="SKINSPANEWYORK">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="mask-icon" type="image/x-icon" href="/img/favicon.svg" color="#111">
+    <title>LOVE YOUR SKIN</title>
+    <link rel="canonical" href="https://skinspanewyork.com/pages/themark.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style>
+@import url("https://use.typekit.net/mik3bzw.css");
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html,
+body {
+  background: #f7f5f6;
+  color: #0e0e0e;
+  font-family: "Interstate", sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+::selection {
+  background: #f7f5f6;
+  color: #0e0e0e;
+  mix-blend-mode: difference;
+}
+
+::-moz-selection {
+  background: #f7f5f6;
+  color: #0e0e0e;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.hero-title {
+  font-size: 8vw;
+  line-height: 1em;
+  font-weight: 800;
+}
+
+.nav-title {
+  font-size: 4em;
+}
+
+a {
+  transition: all 0.25s ease-in-out;
+}
+
+.white, a.white {
+  color: #f7f5f6;
+}
+
+.black {
+  color: #0e0e0e;
+}
+
+.pearl, a.pearl {
+  color: #fff;
+}
+
+.fawn, a.fawn {
+  color: #bc9a64;
+}
+
+.blend {
+  mix-blend-mode: difference !important;
+  color: #f7f5f6;
+  position: relative;
+  z-index: 2;
+}
+
+.bg-black {
+  background-color: #0e0e0e;
+}
+
+.bg-fawn {
+  background-color: #bc9a64;
+}
+
+/* <!-- .---bg-topographic {
+  background-image: url(https://assets.svg);
+  background-size: 5000px;
+  opacity: 0.1;
+  pointer-events: none;
+} --> */
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #bc9a64;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+
+.sticky-nav {
+  top: 20px;
+  left: 20px;
+  position: fixed;
+  width: calc(100% - 40px);
+  z-index: 999;
+}
+.sticky-nav.difference {
+  background-repeat: no-repeat;
+  background-size: contain;
+  mix-blend-mode: difference;
+}
+.sticky-nav.difference #nav-btn {
+  filter: invert(0);
+}
+.sticky-nav .logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0071/6197/0758/files/ssny-round-white.svg?v=1717181620);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  z-index: 998;
+}
+.sticky-nav #nav-btn {
+  width: 60px;
+  z-index: 999;
+  filter: invert(1);
+}
+.sticky-nav #nav-btn .icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #f7f5f6;
+}
+
+#takeover-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  left: 0;
+  top: -200%;
+  transition: all 0.5s ease-in-out;
+  z-index: 996;
+}
+#takeover-nav.shown {
+  top: 0;
+}
+#takeover-nav .nav-col {
+  min-height: 100vh;
+}
+#takeover-nav .nav-col a {
+  color: #f7f5f6;
+}
+#takeover-nav .nav-col a:hover {
+  color: #0e0e0e;
+}
+#takeover-nav .nav-contact .content {
+  max-width: 700px;
+}
+#takeover-nav .nav-items {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+#takeover-nav .contact-items {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+#takeover-nav .contact-items a:hover {
+  color: #bc9a64;
+}
+#takeover-nav .social {
+  font-size: 0.75em;
+}
+#takeover-nav .social a {
+  color: #bc9a64;
+}
+#takeover-nav .social a:hover {
+  color: #f7f5f6;
+}
+
+.gradient-overlay {
+  bottom: 0;
+  height: 50%;
+  background: -moz-linear-gradient(top, rgba(14, 14, 14, 0) 0%, #0e0e0e 50%);
+  background: -webkit-linear-gradient(top, rgba(14, 14, 14, 0) 0%, #0e0e0e 50%);
+  background: linear-gradient(to bottom, rgba(14, 14, 14, 0) 0%, #0e0e0e 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000e0e0e", endColorstr="#0e0e0e",GradientType=0 );
+  z-index: 1;
+  border-bottom-right-radius: 15vw;
+  pointer-events: none;
+}
+
+.video-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom-right-radius: 15vw;
+  pointer-events: none;
+}
+
+#video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  transform: rotate(180deg);
+} 
+
+.fadeOut {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+
+section {
+  min-height: 350px;
+  height: 350px;
+  width: 100%;
+}
+section.hero {
+  background-color: #0e0e0e;
+  border-bottom-right-radius: 10vw;
+  position: relative;
+}
+section.hero:before {
+  content: "";
+  background-color: #0e0e0e;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 15vw;
+  height: 15vw;
+}
+section.hero:after {
+  content: "";
+  background-color: #f7f5f6;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 15vw;
+  height: 15vw;
+  border-top-left-radius: 15vw;
+}
+.container {
+  height: 75%;
+  width: 75%;
+  background-color: #f7f5f6;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  border-radius: 25%;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 75vh;
+  }
+  .hero #video-bg {
+    object-position: 0 5vw;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero #video-bg {
+    object-position: 0 15vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  #takeover-nav .nav-menu {
+    min-height: 500px;
+  }
+  #takeover-nav .nav-menu a {
+    color: #0e0e0e;
+  }
+  #takeover-nav .nav-menu a:hover {
+    color: #f7f5f6;
+  }
+  #takeover-nav .nav-contact {
+    min-height: 600px;
+  }
+  #takeover-nav .nav-contact .nav-title {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 575px) {
+  header .sticky-nav {
+    top: 10px;
+  }
+  header .sticky-nav .logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+  header .sticky-nav #nav-btn {
+    width: 40px;
+  }
+  header #takeover-nav .contact-items {
+    font-size: 1em;
+  }
+
+  .hero {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .hero .hero-title {
+    font-size: 8vw;
+  }
+  .hero #video-bg {
+    object-position: 0 0vw;
+  }
+
+  .two {
+    margin: 50px 20px;
+    max-width: 20%;
+    width: 20%;
+    height: 20%;
+    max-height: 20%;
+    border-radius: 25%;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+</head>
+
+<body translate="no">
+  <div class="page">
+  <header>
+    <!-- div class="swoosh position-fixed"></div -->
+    <div class="sticky-nav difference d-flex justify-content-between">
+      <div class="logo"></div>
+      <div class="menu box" id="nav-btn">
+        <svg id="i1" class="icon" viewBox="20 30 60 40">
+        <path id="top-line-1" d="M30,37 L70,37 Z"></path>
+        <path id="middle-line-1" d="M30,50 L70,50 Z"></path>
+        <path id="bottom-line-1" d="M30,63 L70,63 Z"></path>
+        </svg>
+      </div>
+    </div>
+    <div id="takeover-nav">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="nav-col nav-contact col-12 col-md-7 bg-black d-flex align-items-center justify-content-center position-relative py-5 px-3 order-1 order-md-0">
+            <div class="position-absolute w-100 h-100 bg-topographic"></div>
+            <div class="content position-relative">
+              <h2 class="nav-title white mb-5">
+                Love your Skin with Skin Spa New York @ The Mark<span class="d-inline fawn">.</span>
+              </h2>
+              <ul class="contact-items white list-unstyled mb-5">
+                <li class="pb-4">
+                  <a class="text-decoration-none" href="#">(786) 803-8968</a>
+                </li>
+                <li class="pb-4">
+                  <a class="text-decoration-none" href="#">theskinspabrickell@gmail.com</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none" href="#">Miami, FL 33131</a>
+                </li>
+              </ul>
+              <div class="social">
+                <a class="text-decoration-none pearl" href="https://skinspanewyork.com">website</a>
+                <span class="mx-2 white">
+                  |
+                <a class="text-decoration-none pearl" href="https://tiktok.com/@skinspanewyork">tiktok</a>
+                <span class="mx-2 white">
+                  |
+                </span>
+                <a class="text-decoration-none pearl" href="https://facebook.com/skinspanewyork">facebook</a>
+                <span class="mx-2 white">
+                  |
+                </span>
+                <a class="text-decoration-none pearl" href="https://instagram.com/@skinspanewyork">instagram</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-col nav-menu col-12 col-md-5 bg-fawn d-flex align-items-center pt-5 pb-3 pb-md-5 px-3 px-md-5 order-0 order-md-1">
+            <ul class="nav-items list-unstyled">
+              <li class="pb-3">
+                <a class="text-decoration-none" href="https://skinspanewyork.com">services</a>
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="https://dashboard.boulevard.io/booking/businesses/b5d44d55-9068-484e-a39f-c4dca600538a/widget?locationId=f936802c-2543-4596-bee5-9d2690e4cf01&visitType=SELF_VISIT">shop now</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="mailto:jason@skinspanewyork.com?subject=SKINSPANEWYORK@TheMark">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="hero d-flex align-items-center justify-content-center">
+    <div class="video-wrap fadeOut">
+      <video autoplay="" playsinline="" loop="" muted="" id="video-bg">
+      <source src="https://cdn.shopify.com/videos/c/o/v/94f31544385140bc80657db44e73b9a5.mp4" type="video/mp4">
+      <source src="https://cdn.shopify.com/videos/c/o/v/cfe79c6d7a4f4471ba3231e3296780dd.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="position-absolute w-100 gradient-overlay"></div>
+    <div class="content position-relative text-center mb-3">
+      <h1 class="hero-title blend">
+         SKINSPANEWYORK <br>@ THE MARK
+      </h1>
+    </div>
+  </section>
+  <section class="container">
+ <div class="klaviyo-form-SPauBt"></div>
+  </section>
+</div>
+<div class="custom-cursor" style="left: 264px; top: 38px; opacity: 0;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/409445/animateAnything.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=KaFi57"></script>
+
+      <script id="rendered-js">
+$("#nav-btn").on("click", function () {
+  $('#takeover-nav').toggleClass("shown");
+  $('.sticky-nav').toggleClass("difference");
+});
+
+
+
+///Initiation Variables
+var icon_1 = document.getElementById("nav-btn");
+var topLine_1 = document.getElementById("top-line-1");
+var middleLine_1 = document.getElementById("middle-line-1");
+var bottomLine_1 = document.getElementById("bottom-line-1");
+var state_1 = "menu"; // can be "menu" or "arrow"
+var topLineY_1;
+var middleLineY_1;
+var bottomLineY_1;
+var topLeftY_1;
+var topRightY_1;
+var bottomLeftY_1;
+var bottomRightY_1;
+var topLeftX_1;
+var topRightX_1;
+var bottomLeftX_1;
+var bottomRightX_1;
+
+///Animation Variables
+var segmentDuration_1 = 15;
+var menuDisappearDurationInFrames_1 = segmentDuration_1;
+var arrowAppearDurationInFrames_1 = segmentDuration_1;
+var arrowDisappearDurationInFrames_1 = segmentDuration_1;
+var menuAppearDurationInFrames_1 = segmentDuration_1;
+var menuDisappearComplete_1 = false;
+var arrowAppearComplete_1 = false;
+var arrowDisappearComplete_1 = false;
+var menuAppearComplete_1 = false;
+var currentFrame_1 = 1;
+
+///Menu Disappear 
+function menuDisappearAnimation_1() {
+  currentFrame_1++;
+  if (currentFrame_1 <= menuDisappearDurationInFrames_1) {
+    window.requestAnimationFrame(() => {
+      //top line
+      topLineY_1 = AJS.easeInBack(37, 50, menuDisappearDurationInFrames_1, currentFrame_1);
+      topLine_1.setAttribute("d", "M30," + topLineY_1 + " L70," + topLineY_1);
+      //bottom line
+      bottomLineY_1 = AJS.easeInBack(63, 50, menuDisappearDurationInFrames_1, currentFrame_1);
+      bottomLine_1.setAttribute("d", "M30," + bottomLineY_1 + " L70," + bottomLineY_1);
+      //recursion
+      menuDisappearAnimation_1();
+    });
+  } else {
+    middleLine_1.style.opacity = "0";
+    currentFrame_1 = 1;
+    menuDisappearComplete_1 = true;
+    openMenuAnimation_1();
+  }
+}
+
+///Cross Appear
+function arrowAppearAnimation_1() {
+  currentFrame_1++;
+  if (currentFrame_1 <= arrowAppearDurationInFrames_1) {
+    window.requestAnimationFrame(() => {
+      //top line
+      topLeftX_1 = AJS.easeOutBack(30, 35, arrowAppearDurationInFrames_1, currentFrame_1);
+      topLeftY_1 = AJS.easeOutBack(50, 35, arrowAppearDurationInFrames_1, currentFrame_1);
+      bottomRightX_1 = AJS.easeOutBack(70, 65, arrowAppearDurationInFrames_1, currentFrame_1);
+      bottomRightY_1 = AJS.easeOutBack(50, 65, arrowAppearDurationInFrames_1, currentFrame_1);
+      topLine_1.setAttribute("d", "M" + topLeftX_1 + "," + topLeftY_1 + " L" + bottomRightX_1 + "," + bottomRightY_1);
+      //bottom line
+      bottomLeftX_1 = AJS.easeOutBack(30, 35, arrowAppearDurationInFrames_1, currentFrame_1);
+      bottomLeftY_1 = AJS.easeOutBack(50, 65, arrowAppearDurationInFrames_1, currentFrame_1);
+      topRightX_1 = AJS.easeOutBack(70, 65, arrowAppearDurationInFrames_1, currentFrame_1);
+      topRightY_1 = AJS.easeOutBack(50, 35, arrowAppearDurationInFrames_1, currentFrame_1);
+      bottomLine_1.setAttribute("d", "M" + bottomLeftX_1 + "," + bottomLeftY_1 + " L" + topRightX_1 + "," + topRightY_1);
+      //recursion
+      arrowAppearAnimation_1();
+    });
+  } else {
+    currentFrame_1 = 1;
+    arrowAppearComplete_1 = true;
+    openMenuAnimation_1();
+  }
+}
+
+///Combined Open Menu Animation
+function openMenuAnimation_1() {
+  if (!menuDisappearComplete_1) {
+    menuDisappearAnimation_1();
+  } else if (!arrowAppearComplete_1) {
+    arrowAppearAnimation_1();
+  }
+}
+
+///Cross Disappear
+function arrowDisappearAnimation_1() {
+  currentFrame_1++;
+  if (currentFrame_1 <= arrowDisappearDurationInFrames_1) {
+    window.requestAnimationFrame(() => {
+      //top line
+      topLeftX_1 = AJS.easeInBack(35, 30, arrowDisappearDurationInFrames_1, currentFrame_1);
+      topLeftY_1 = AJS.easeInBack(35, 50, arrowDisappearDurationInFrames_1, currentFrame_1);
+      bottomRightX_1 = AJS.easeInBack(65, 70, arrowDisappearDurationInFrames_1, currentFrame_1);
+      bottomRightY_1 = AJS.easeInBack(65, 50, arrowDisappearDurationInFrames_1, currentFrame_1);
+      topLine_1.setAttribute("d", "M" + topLeftX_1 + "," + topLeftY_1 + " L" + bottomRightX_1 + "," + bottomRightY_1);
+      //bottom line
+      bottomLeftX_1 = AJS.easeInBack(35, 30, arrowDisappearDurationInFrames_1, currentFrame_1);
+      bottomLeftY_1 = AJS.easeInBack(65, 50, arrowDisappearDurationInFrames_1, currentFrame_1);
+      topRightX_1 = AJS.easeInBack(65, 70, arrowDisappearDurationInFrames_1, currentFrame_1);
+      topRightY_1 = AJS.easeInBack(35, 50, arrowDisappearDurationInFrames_1, currentFrame_1);
+      bottomLine_1.setAttribute("d", "M" + bottomLeftX_1 + "," + bottomLeftY_1 + " L" + topRightX_1 + "," + topRightY_1);
+      //recursion
+      arrowDisappearAnimation_1();
+    });
+  } else {
+    middleLine_1.style.opacity = "1";
+    currentFrame_1 = 1;
+    arrowDisappearComplete_1 = true;
+    closeMenuAnimation_1();
+  }
+}
+
+///Menu Appear
+function menuAppearAnimation_1() {
+  currentFrame_1++;
+  if (currentFrame_1 <= menuAppearDurationInFrames_1) {
+    window.requestAnimationFrame(() => {
+      //top line
+      topLineY_1 = AJS.easeOutBack(50, 37, menuDisappearDurationInFrames_1, currentFrame_1);
+      topLine_1.setAttribute("d", "M30," + topLineY_1 + " L70," + topLineY_1);
+      //bottom line
+      bottomLineY_1 = AJS.easeOutBack(50, 63, menuDisappearDurationInFrames_1, currentFrame_1);
+      bottomLine_1.setAttribute("d", "M30," + bottomLineY_1 + " L70," + bottomLineY_1);
+      //recursion
+      menuAppearAnimation_1();
+    });
+  } else {
+    currentFrame_1 = 1;
+    menuAppearComplete_1 = true;
+    closeMenuAnimation_1();
+  }
+}
+
+///Close Menu Animation
+function closeMenuAnimation_1() {
+  if (!arrowDisappearComplete_1) {
+    arrowDisappearAnimation_1();
+  } else if (!menuAppearComplete_1) {
+    menuAppearAnimation_1();
+  }
+}
+
+///Events
+icon_1.addEventListener("click", () => {
+  if (state_1 === "menu") {
+    openMenuAnimation_1();
+    state_1 = "arrow";
+    arrowDisappearComplete_1 = false;
+    menuAppearComplete_1 = false;
+  } else if (state_1 === "arrow") {
+    closeMenuAnimation_1();
+    state_1 = "menu";
+    menuDisappearComplete_1 = false;
+    arrowAppearComplete_1 = false;
+  }
+});
+
+
+// Cursor
+document.addEventListener("DOMContentLoaded", function (event) {
+  var cursor = document.querySelector(".custom-cursor");
+  var links = document.querySelectorAll("a, button, #nav-btn, input.btn");
+
+  var initCursor = false;
+
+  for (var i = 0; i < links.length; i++) {
+    var selfLink = links[i];
+
+    selfLink.addEventListener("mouseover", function () {
+      cursor.classList.add("custom-cursor--link");
+    });
+    selfLink.addEventListener("mouseout", function () {
+      cursor.classList.remove("custom-cursor--link");
+    });
+  }
+
+
+  window.onmousemove = function (e) {
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+
+    if (!initCursor) {
+      // cursor.style.opacity = 1;
+      TweenLite.to(cursor, 0.5, {
+        opacity: 1 });
+
+      initCursor = true;
+    }
+
+    TweenLite.to(cursor, 0, {
+      top: mouseY + "px",
+      left: mouseX + "px" });
+
+  };
+
+  window.ontouchmove = function (e) {
+    var mouseX = e.touches[0].clientX;
+    var mouseY = e.touches[0].clientY;
+    if (!initCursor) {
+      // cursor.style.opacity = 1;
+      TweenLite.to(cursor, 0.3, {
+        opacity: 1 });
+
+      initCursor = true;
+    }
+
+    TweenLite.to(cursor, 0, {
+      top: mouseY + "px",
+      left: mouseX + "px" });
+
+  };
+
+  window.onmouseout = function (e) {
+    TweenLite.to(cursor, 0.3, {
+      opacity: 0 });
+
+    initCursor = false;
+  };
+
+  window.ontouchstart = function (e) {
+    TweenLite.to(cursor, 0.3, {
+      opacity: 1 });
+
+  };
+
+  window.ontouchend = function (e) {
+    setTimeout(function () {
+      TweenLite.to(cursor, 0.3, {
+        opacity: 0 });
+
+    }, 200);
+  };
+
+});
+    </script>
+</body>
+</html>
+  
+
+
