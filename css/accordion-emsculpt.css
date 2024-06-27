@@ -51,9 +51,9 @@
 }
 
 .accordion .icon {
-	width: 36px;
-	height: 36px;
-	stroke: #0e0e0e;
+	width: 24px;
+	height: 24px;
+	stroke: #bc9a64;
 	transition: transform 0.5s ease-in;
 }
 
