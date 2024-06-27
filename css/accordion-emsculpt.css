@@ -8,7 +8,7 @@
 	margin: 100px auto;
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 6px;
 }
 
 .accordion .item {
@@ -51,8 +51,8 @@
 }
 
 .accordion .icon {
-	width: 24px;
-	height: 24px;
+	width: 36px;
+	height: 36px;
 	stroke: #0e0e0e;
 	transition: transform 0.5s ease-in;
 }
